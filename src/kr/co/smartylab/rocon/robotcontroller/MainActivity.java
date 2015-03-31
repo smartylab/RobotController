@@ -110,8 +110,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				btConnect.setText("Disconnect");
 				etAddr.setEnabled(false);
 				isConnected = true;
-//				sensorMovementHandler.setCommunication(new Communication(addr));
-				sensorMovementHandler.setCommunication(new Communication("http://203.253.23.1:8889"));
+				sensorMovementHandler.setCommunication(new Communication((addr == null || addr.equals(""))?"http://192.168.0.4:8080":addr));
 			} else {
 				btConnect.setText("Connect");
 				etAddr.setEnabled(true);

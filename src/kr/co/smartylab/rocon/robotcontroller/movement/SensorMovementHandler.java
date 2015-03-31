@@ -96,6 +96,7 @@ public class SensorMovementHandler implements SensorEventListener {
 	
 	public void setCommunication(Communication comm) {
 		this.comm = comm;
+		comm.connect();
 	}
 
 	private float calcLinear() {
